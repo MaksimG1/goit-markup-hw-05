@@ -672,7 +672,6 @@ li {
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -680,7 +679,40 @@ li {
   color: var(--navy_blue_modal);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: transparent;
+  margin-bottom: 16px;
 }
 .modal_textarea:focus-within {
   border-color: var(--iris);
+}
+.checkbox_container {
+  margin-bottom: 24px;
+}
+.modal_form_label_check {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light_slate);
+}
+.modal_form_label_check > a {
+  text-decoration: underline;
+  color: var(--iris);
+}
+.modal_label_span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_label_span_svg {
+  fill: transparent;
+}
+.modal_checkbox_input:checked .modal_label_span {
+  background-color: red;
 }
