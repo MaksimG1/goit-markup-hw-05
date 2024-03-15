@@ -607,13 +607,14 @@ li {
   color: #fff;
   background-color: var(--iris);
   border: none;
-  gap: 16px;
+
   background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .f_form_buttn:hover {
   background-color: var(--ocean);
 }
 .f_button_form_span_svg {
+  margin-left: 16px;
   fill: var(--white);
 }
 /* MODAAL🤕  ======================================================================================*/
@@ -669,6 +670,10 @@ li {
   padding: 0;
   cursor: pointer;
 }
+.modal_btn:hover {
+  background-color: #404bbf;
+  border: none;
+}
 .modal_close_svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -678,8 +683,8 @@ li {
   border: none;
 }
 
-.modal_btn:hover > .modal_close_svg,
-.modal_btn:focus > .modal_close_svg {
+.modal_btn:hover .modal_close_svg,
+.modal_btn:focus .modal_close_svg {
   fill: var(--white);
 }
 .modal_par {
@@ -775,6 +780,7 @@ li {
   color: var(--iris);
 }
 .modal_label_span {
+  fill: transparent;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
