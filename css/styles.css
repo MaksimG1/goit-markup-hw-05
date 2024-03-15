@@ -551,6 +551,9 @@ li {
 .footer_social_svg {
   fill: var(--cloud);
 }
+
+/* MODAAL🤕  ======================================================================================*/
+
 .modal_overlay {
   position: fixed;
   background-color: rgba(46, 47, 66, 0.4);
@@ -703,7 +706,7 @@ li {
   letter-spacing: 0.04em;
   color: var(--light_slate);
 }
-.modal_form_label_check > a {
+.modal_form_label_check > .modal_label_checked_link {
   text-decoration: underline;
   color: var(--iris);
 }
@@ -718,11 +721,43 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: transparent;
+  margin-right: 8px;
+  cursor: pointer;
 }
 .modal_label_span_svg {
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal_checkbox_input:checked .modal_label_span {
-  background-color: red;
+.modal_checkbox_input:checked + .modal_form_label_check .modal_label_span,
+.modal_checkbox_input:checked + .modal_form_label_check .modal_label_span_svg {
+  background-color: var(--ocean);
+  fill: var(--cloud);
+  border: none;
+}
+.modal_checkbox_input:focus + .modal_form_label_check .modal_label_span {
+  outline: 1px solid var(--ocean);
+}
+.modal_button {
+  display: block;
+  border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  background-color: var(--iris);
+  cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+}
+.modal_button:hover {
+  background-color: var(--ocean);
 }
